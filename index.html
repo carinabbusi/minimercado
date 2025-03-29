@@ -18,17 +18,22 @@
 </head>
 <body id="topo">
   <!-- Cabeçalho -->
-  <header class="text-white text-center p-4" style="background-color: #DAA520;">
-    <h1>Minimercado Econômico</h1>
-    <p class="lead">Produtos essenciais, com qualidade e economia para sua casa</p>
+  <header class="text-white p-4" style="background-color: #DAA520;">
+    <div class="container">
+      <h1>Minimercado Econômico</h1>
+      <p class="lead">Produtos essenciais, com qualidade e economia para sua casa</p>
+    </div>
   </header>
 
-  <!-- Menu -->
+  <!-- Menu de Navegação -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
+    <div class="container">
       <a class="navbar-brand" href="#topo">Início</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
           <li class="nav-item"><a class="nav-link" href="#cadastro">Cadastro</a></li>
           <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
@@ -38,15 +43,15 @@
   </nav>
 
   <!-- Produtos -->
-  <section id="produtos" class="container mt-5 text-start">
+  <section id="produtos" class="container mt-5">
     <h2>Produtos</h2>
     <div class="row">
       <div class="col-sm-6 col-md-4 col-lg-3">
         <div class="card">
           <img src="img/arroz.jpg" class="card-img-top" alt="Arroz">
           <div class="card-body">
-            <h5 class="card-title">Arroz</h5>
-            <p class="card-text">R$10,00</p>
+            <h5 class="card-title text-center">Arroz</h5>
+            <p class="card-text text-center">R$10,00</p>
           </div>
         </div>
       </div>
@@ -54,8 +59,8 @@
         <div class="card">
           <img src="img/feijao.jpg" class="card-img-top" alt="Feijão">
           <div class="card-body">
-            <h5 class="card-title">Feijão</h5>
-            <p class="card-text">R$8,50</p>
+            <h5 class="card-title text-center">Feijão</h5>
+            <p class="card-text text-center">R$8,50</p>
           </div>
         </div>
       </div>
@@ -63,8 +68,8 @@
         <div class="card">
           <img src="img/suco.jpg" class="card-img-top" alt="Suco Natural">
           <div class="card-body">
-            <h5 class="card-title">Suco Natural</h5>
-            <p class="card-text">R$5,00</p>
+            <h5 class="card-title text-center">Suco Natural</h5>
+            <p class="card-text text-center">R$5,00</p>
           </div>
         </div>
       </div>
@@ -72,8 +77,8 @@
         <div class="card">
           <img src="img/refrigerante.jpg" class="card-img-top" alt="Refrigerante">
           <div class="card-body">
-            <h5 class="card-title">Refrigerante</h5>
-            <p class="card-text">R$7,00</p>
+            <h5 class="card-title text-center">Refrigerante</h5>
+            <p class="card-text text-center">R$7,00</p>
           </div>
         </div>
       </div>
@@ -81,8 +86,8 @@
         <div class="card">
           <img src="img/detergente.jpg" class="card-img-top" alt="Detergente">
           <div class="card-body">
-            <h5 class="card-title">Detergente</h5>
-            <p class="card-text">R$2,50</p>
+            <h5 class="card-title text-center">Detergente</h5>
+            <p class="card-text text-center">R$2,50</p>
           </div>
         </div>
       </div>
@@ -90,19 +95,19 @@
         <div class="card">
           <img src="img/sabao.jpg" class="card-img-top" alt="Sabão em pó">
           <div class="card-body">
-            <h5 class="card-title">Sabão em pó</h5>
-            <p class="card-text">R$10,00</p>
+            <h5 class="card-title text-center">Sabão em pó</h5>
+            <p class="card-text text-center">R$10,00</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Formulário -->
+  <!-- Cadastro -->
   <section id="cadastro" class="container mt-5">
     <h2>Cadastro do Cliente</h2>
     <form id="formCliente">
-      <div class="mb-3"><label for="nome" class="form-label">Nome:</label><input type="text" class="form-control" id="nome" required></div>
+      <div class="mb-3"><label for="nome" class="form-label">Nome completo:</label><input type="text" class="form-control" id="nome" required></div>
       <div class="mb-3"><label for="endereco" class="form-label">Endereço:</label><input type="text" class="form-control" id="endereco" required></div>
       <div class="mb-3"><label for="cpf" class="form-label">CPF:</label><input type="number" class="form-control" id="cpf" required></div>
       <div class="mb-3"><label class="form-label">Sexo:</label><br><input type="radio" name="sexo" value="masculino" required> Masculino <input type="radio" name="sexo" value="feminino" required> Feminino</div>
@@ -128,7 +133,7 @@
 
   <!-- Rodapé -->
   <footer class="bg-light text-center p-4 mt-5">
-    <p>&copy; 2025 Minimercado Econômico. Desenvolvido por Carina Busi</p>
+    <p>&copy; 2025 Minimercado Econômico. Todos os direitos reservados.</p>
     <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
     <p id="dataHora"></p>
   </footer>
