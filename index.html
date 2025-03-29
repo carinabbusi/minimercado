@@ -102,14 +102,95 @@
     </div>
   </section>
 
-  <!-- Restante do código permanece como configurado anteriormente -->
+  <section id="cadastro" class="container mt-5">
+    <h2>Cadastro do Cliente</h2>
+    <form id="formCliente">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome completo:</label>
+        <input type="text" class="form-control" id="nome" name="nome" required placeholder="Digite seu nome completo">
+      </div>
+      <div class="mb-3">
+        <label for="endereco" class="form-label">Endereço:</label>
+        <input type="text" class="form-control" id="endereco" name="endereco" required>
+      </div>
+      <div class="mb-3">
+        <label for="cpf" class="form-label">CPF:</label>
+        <input type="text" class="form-control" id="cpf" name="cpf" required pattern="\\d{11}" placeholder="Apenas números (ex: 12345678900)">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Gênero:</label><br>
+        <input type="radio" name="genero" value="feminino" required> Feminino<br>
+        <input type="radio" name="genero" value="masculino" required> Masculino<br>
+        <input type="radio" name="genero" value="nao-binario" required> Não binário<br>
+        <input type="radio" name="genero" value="outro" id="generoOutroRadio" required> Outro<br>
+        <input type="text" id="campoOutro" name="generoOutro" class="form-control mt-2" style="display: none;" placeholder="Se quiser, especifique">
+      </div>
+      <div class="mb-3">
+        <label for="telefone" class="form-label">Telefone:</label>
+        <input type="tel" class="form-control" id="telefone" name="telefone" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="observacoes" class="form-label">Observações:</label>
+        <textarea class="form-control" id="observacoes" name="observacoes"></textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Forma de retirada:</label><br>
+        <input type="radio" name="retirada" value="entrega" required> Entrega em domicílio
+        <input type="radio" name="retirada" value="local" required> Retirada no local
+      </div>
+      <div class="mb-3">
+        <label for="data" class="form-label">Data:</label>
+        <input type="date" class="form-control" id="data" name="data" required>
+      </div>
+      <div class="mb-3">
+        <label for="hora" class="form-label">Hora:</label>
+        <input type="time" class="form-control" id="hora" name="hora" required>
+      </div>
+      <button type="submit" class="btn btn-success">Enviar</button>
+      <button type="reset" class="btn btn-secondary">Limpar</button>
+    </form>
+  </section>
+
+  <section id="servicos" class="container mt-5">
+    <h2>Serviços</h2>
+    <ul>
+      <li>✔️ Entrega em domicílio - R$5,00</li>
+      <li>✔️ Cartão Fidelidade - Acumule pontos e ganhe descontos</li>
+    </ul>
+  </section>
+
+  <footer class="bg-light p-4 mt-5">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 Minimercado Econômico. Todos os direitos reservados.</p>
+      <p class="mb-1">
+        Desenvolvido por <strong>Carina Busi</strong> |
+        <a href="mailto:carina@email.com" class="text-decoration-none">carina@email.com</a>
+      </p>
+      <p class="mb-1">
+        <a href="https://github.com/carinabbusi" target="_blank" class="me-3 text-dark text-decoration-none">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/seu-perfil" target="_blank" class="me-3 text-dark text-decoration-none">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://www.instagram.com/seuinsta" target="_blank" class="text-dark text-decoration-none">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </p>
+      <p class="mb-0" id="dataHora"></p>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const radioOutro = document.getElementById('generoOutroRadio');
       const campoOutro = document.getElementById('campoOutro');
-      const radiosGenero = document.querySelectorAll('input[name="genero"]');
+      const radiosGenero = document.querySelectorAll('input[name=\"genero\"]');
 
       radiosGenero.forEach(radio => {
         radio.addEventListener('change', () => {
