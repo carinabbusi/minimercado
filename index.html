@@ -9,22 +9,25 @@
             text-align: center;
         }
         .container {
-            max-width: 900px; /* Limita o tamanho máximo da área */
+            max-width: 900px;
             margin: 0 auto;
         }
         .produtos-grid {
             display: flex;
-            justify-content: space-between; /* Espaço adequado entre produtos */
+            justify-content: space-between;
             flex-wrap: wrap;
             gap: 30px;
         }
         .produto {
             text-align: center;
-            width: 180px; /* Ajuste do tamanho do bloco */
+            width: 180px;
         }
         img {
             width: 120px;
             height: 150px;
+        }
+        footer p, footer a {
+            font-size: 14px;
         }
     </style>
 </head>
@@ -32,6 +35,7 @@
     <!-- Cabeçalho -->
     <header>
         <h1>Minimercado Econômico</h1>
+        <p>O seu mercado de bairro com economia e qualidade todos os dias</p>
         <nav>
             <ul>
                 <li><a href="#produtos">Produtos</a></li>
@@ -40,7 +44,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <!-- Corpo da Página -->
     <main class="container">
         <section id="produtos">
@@ -51,10 +55,12 @@
                 <div class="produto">
                     <img src="img/arroz.jpg" alt="Arroz">
                     <strong>Arroz - R$10,00</strong>
+                    <p>Arroz Tipo 1, pacote 1kg, marca Camil. Ideal para o dia a dia.</p>
                 </div>
                 <div class="produto">
                     <img src="img/feijao.jpg" alt="Feijão">
                     <strong>Feijão - R$8,50</strong>
+                    <p>Feijão preto 1kg, Tordilho. Rico em proteínas e fibras.</p>
                 </div>
             </div>
 
@@ -63,10 +69,12 @@
                 <div class="produto">
                     <img src="img/suco.jpg" alt="Suco">
                     <strong>Suco Natural - R$5,00</strong>
+                    <p>Suco de laranja Natural One 300ml. 100% suco, sem conservantes.</p>
                 </div>
                 <div class="produto">
                     <img src="img/refrigerante.jpg" alt="Refrigerante">
                     <strong>Refrigerante - R$7,00</strong>
+                    <p>Pepsi 2L, sabor tradicional. Refrescante para toda ocasião.</p>
                 </div>
             </div>
 
@@ -75,27 +83,37 @@
                 <div class="produto">
                     <img src="img/detergente.jpg" alt="Detergente">
                     <strong>Detergente - R$2,50</strong>
+                    <p>Detergente Ypê 500ml. Eficiência na remoção de gordura.</p>
                 </div>
                 <div class="produto">
                     <img src="img/sabao.jpg" alt="Sabão em pó">
                     <strong>Sabão em pó - R$10,00</strong>
+                    <p>Sabão em pó Ypê 1kg. Rende mais e limpa profundamente.</p>
                 </div>
             </div>
         </section>
-        
+
         <section id="servicos">
             <h2>Serviços</h2>
             <ul>
-                <li>Entrega em domicílio - R$5,00</li>
-                <li>Cartão Fidelidade - Acumule pontos e ganhe descontos</li>
+                <li>Entrega em domicílio - R$5,00<br><small>Disponível para toda a cidade com pedidos acima de R$30.</small></li>
+                <li>Cartão Fidelidade - Acumule pontos e ganhe descontos<br><small>Consulte condições nas compras acima de R$50.</small></li>
             </ul>
         </section>
     </main>
-    
+
     <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 Minimercado Econômico. Todos os direitos reservados.</p>
-        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+        <p>Desenvolvido por Carina Busi | <a href="mailto:carina@email.com">carina@email.com</a></p>
+        <p>
+            <a href="#">Política de Privacidade</a> |
+            <a href="#">Termos de Uso</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Facebook</a>
+        </p>
     </footer>
 </body>
 </html>
+
+
